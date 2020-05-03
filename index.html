@@ -32,28 +32,18 @@
           } else if (inputLength > 128) {
             alert("Please choose less than 128 characters.");
             setPassLength()
-          } 
-          
+          } else {
             passLength=inputLength
+            showPassType()
+          }
         
-      }
-        if (passLength < 1) {
-          alert(passLength)
         }
+        
+      function showPassType() {
+        var passType = alert("What character types would you like?")
+      }
+
       
-
-
-      // function qlength()
-      //     var passLength = (prompt("How many characters would you like?  Choose between 8 and 128 in length.",""));
-      //     if (passLength < 8) {
-      //       alert("Too few characters. Please choose at least 8.");
-            
-      //     } else if (passLength > 128) {
-      //       prompt("Too many characters, Please choose less than 128.");
-            
-      //     } else if (passLength === null) {
-      //       prompt("No choice selected.  Please choose again.")
-      //     }
         
         
         
