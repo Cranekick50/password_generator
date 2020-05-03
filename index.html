@@ -9,21 +9,54 @@
 
     <!-- Create button Generate Password -->
         <button onclick="criteria()">Generate Password</button>
-      
       <script type="text/javascript">
+      
+      // Separating out variables
+      var passLength; 
+      var passType; 
+      var passLow; 
+      var passUpper; 
+      var passNum; 
+      var passSpec;
+
+      // Create function to prompt criteria
       function criteria() {
         var instruct = alert("Please choose criteria for your password.");
-        var passLength = prompt("How many characters would you like?  Choose between 8 and 128 in length.");
-        var passType = alert("What character types would you like?")
-        var passLow = confirm("Lowercase characters?")
-        var passUpper = confirm("Uppercase characters?")
-        var passNum = confirm("Numeric characters?")
-        var passSpec = confirm("Special characters?")
+        setPassLength()
       }
+      function setPassLength() {
+        inputLength = prompt("How many characters would you like?  Choose between 8 and 128 in length.")
+        if (inputLength < 8) {
+            alert("Please choose at least 8 characters.");
+            setPassLength()
+          } else if (inputLength > 128) {
+            alert("Please choose less than 128 characters.");
+            setPassLength()
+          } 
+          
+            passLength=inputLength
         
+      }
+        if (passLength < 1) {
+          alert(passLength)
+        }
+      
 
+
+      // function qlength()
+      //     var passLength = (prompt("How many characters would you like?  Choose between 8 and 128 in length.",""));
+      //     if (passLength < 8) {
+      //       alert("Too few characters. Please choose at least 8.");
+            
+      //     } else if (passLength > 128) {
+      //       prompt("Too many characters, Please choose less than 128.");
+            
+      //     } else if (passLength === null) {
+      //       prompt("No choice selected.  Please choose again.")
+      //     }
         
-        // Create function to prompt criteria
+        
+        
         // First criteria asks number of characters, between 8 and 128 characters
         // Second criteria asks what character types to include.  Lowercase, uppercase, numberic, and/or special characters.  At least 1 must be picked.
         // Generate password and present to user in an alert.
