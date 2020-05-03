@@ -8,7 +8,7 @@
   <body>
 
     <!-- Create button Generate Password -->
-        <button onclick="criteria()">Generate Password</button>
+        <button onclick = "criteria()">Generate Password</button>
       <script type="text/javascript">
       
       // Separating out variables
@@ -41,29 +41,37 @@
         }
       // Second criteria asks what character types to include.  Lowercase, uppercase, numberic, and/or special characters.  At least 1 must be picked.  
       function showPassType() {
-        var passType = alert("What character types would you like?")
-        setPassLow()
+        var passType = alert("What character types would you like?");
+        setPassLow();
       }
       function setPassLow() {
-        var lowCase = confirm("Lowercase characters?")
-        passLow = lowCase
-        setPassUpper()
+        var lowCase = confirm("Lowercase characters?");
+        passLow = lowCase;
+        setPassUpper();
       }
       function setPassUpper() {
-        var upperCase = confirm("Uppercase characters?")
-        passUpper = upperCase
-        setPassNum()
+        var upperCase = confirm("Uppercase characters?");
+        passUpper = upperCase;
+        setPassNum();
       }
       function setPassNum() {
-        var numQues = confirm("Numeric characters?")
-        passNum = numQues
-        setPassSpec()
+        var numQues = confirm("Numeric characters?");
+        passNum = numQues;
+        setPassSpec();
       }
       function setPassSpec() {
-        var specialQues = confirm("Special characters?")
-        passSpec = specialQues
-        setCharCheck()
+        var specialQues = confirm("Special characters?");
+        passSpec = specialQues;
+        setCharCheck();
       }
+      function setCharCheck() {
+        if (passLow===false && passUpper===false && passNum===false && passSpec===false) {alert("You must choose at least 1 character type.");
+        showPassType();
+        } else {createPassword()}
+      }
+      
+
+      
 
       
         
