@@ -24,6 +24,7 @@
         var instruct = alert("Please choose criteria for your password.");
         setPassLength()
       }
+      // First criteria asks number of characters, between 8 and 128 characters
       function setPassLength() {
         inputLength = prompt("How many characters would you like?  Choose between 8 and 128 in length.")
         if (inputLength < 8) {
@@ -38,17 +39,22 @@
           }
         
         }
-        
+      // Second criteria asks what character types to include.  Lowercase, uppercase, numberic, and/or special characters.  At least 1 must be picked.  
       function showPassType() {
         var passType = alert("What character types would you like?")
+        setPassLow()
+      }
+      function setPassLow() {
+        var lowCase = confirm("Lowercase characters?")
+        passLow = lowCase
       }
 
       
         
         
         
-        // First criteria asks number of characters, between 8 and 128 characters
-        // Second criteria asks what character types to include.  Lowercase, uppercase, numberic, and/or special characters.  At least 1 must be picked.
+        
+        
         // Generate password and present to user in an alert.
 
 </script>
