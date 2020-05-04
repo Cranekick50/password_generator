@@ -76,25 +76,28 @@
       }
       function createPassword() {
         var password = '';
+        // when all true
         if (passLow===true && passUpper===true && passNum===true && passSpec===true) {
           var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$&@<>~!%#';
           var charactersLength = characters.length;
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+        //  when only special is false
         } else if (passLow===true && passUpper===true && passNum===true && passSpec===false) {
           var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
           var charactersLength = characters.length;
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+         //  when only upper is false
         } else if (passLow===true && passUpper===false && passNum===true && passSpec===true) {
           var characters = 'abcdefghijklmnopqrstuvwxyz0123456789$&@<>~!%#';
           var charactersLength = characters.length;
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
-
+        //  when only lower is false
         } else if (passLow===false && passUpper===true && passNum===true && passSpec===true) {
           var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$&@<>~!%#';
           var charactersLength = characters.length;
