@@ -171,7 +171,15 @@
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+         //  if only upper is true
+        } else if (passLow===false && passUpper===true && passNum===false && passSpec===false) {
+          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          var charactersLength = characters.length;
+        for (i = 0; i <= passLength; i++) {
+          password += characters.charAt(Math.floor(Math.random() * charactersLength));
+         }
         }
+        
 
         
         alert(password)
