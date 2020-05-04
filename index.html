@@ -157,6 +157,13 @@
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+         //  if only special is true
+        } else if (passLow===false && passUpper===false && passNum===false && passSpec===true) {
+          var characters = '$&@<>~!%#';
+          var charactersLength = characters.length;
+        for (i = 0; i <= passLength; i++) {
+          password += characters.charAt(Math.floor(Math.random() * charactersLength));
+         }
         }
 
         
