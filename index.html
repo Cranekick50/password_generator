@@ -94,6 +94,13 @@
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+         // if all types are true except lower case
+        } else if (passLow===false && passUpper===true && passNum===true && passSpec===true) {
+          var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$&@<>~!%#';
+          var charactersLength = characters.length;
+        for (i = 0; i <= passLength; i++) {
+          password += characters.charAt(Math.floor(Math.random() * charactersLength));
+         }
         }
 
         
