@@ -108,6 +108,13 @@
         for (i = 0; i <= passLength; i++) {
           password += characters.charAt(Math.floor(Math.random() * charactersLength));
          }
+         //  if upper and special is false
+        } else if (passLow===true && passUpper===false && passNum===true && passSpec===false) {
+          var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+          var charactersLength = characters.length;
+        for (i = 0; i <= passLength; i++) {
+          password += characters.charAt(Math.floor(Math.random() * charactersLength));
+         }
         }
 
         
